@@ -1,0 +1,54 @@
+$playgroundWidth: 600px;
+$playgroundHeight: 300px;
+$playgroundBackground: #FF00FF;
+$loadingBarTop: 120px;
+$loadingBarWidth: 400px;
+$loadingBarHeight: 15px;
+$loadingBarBorder: #660000;
+$loadingBarBackground: red;
+$startbuttonTop: 140px;
+
+html, body {
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+#playground {
+	position: relative;
+	width: $playgroundWidth;
+	height: $playgroundHeight;
+	background: $playgroundBackground;
+}
+
+#welcomeScreen {
+	position: absolute;
+	width: $playgroundWidth;
+	height: $playgroundHeight;
+
+	#loadingBarB {
+		position: relative;
+		top: $loadingBarTop;
+		width: $loadingBarWidth;
+		height: $loadingBarHeight;
+		margin-left: auto;
+		margin-right: auto;
+		background: none;
+		border: thin solid $loadingBarBorder;
+
+		#loadingBar {
+			position: absolute;
+			width: 0;
+			height: $loadingBarHeight;
+			background: $loadingBarBackground;
+		}
+	}
+
+	#startbutton {
+		position: relative;
+		top: $startbuttonTop;
+		text-align: center;
+		cursor: pointer;
+	}
+}
+

@@ -20,17 +20,18 @@ html, body {
 
 #loadingBarB {
 	position: relative;
-	left: 100px;
 	top: 120px;
 	width: 400px;
 	height: 15px;
+	margin-left: auto;
+	margin-right: auto;
 	background: none;
 	border: thin solid #660000;
 }
 
 #loadingBar {
 	position: absolute;
-	width: 0px;
+	width: 0;
 	height: 15px;
 	background: red;
 }
