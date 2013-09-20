@@ -1,0 +1,44 @@
+html, body {
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+#playground {
+	position: relative;
+	width: 600px;
+	height: 300px;
+	background: black;
+	color: white;
+}
+
+#welcomeScreen {
+	position: absolute;
+	width: 600px;
+	height: 300px;
+}
+
+#loadingBarB {
+	position: relative;
+	left: 100px;
+	top: 120px;
+	width: 400px;
+	height: 15px;
+	background: none;
+	border: thin solid #660000;
+}
+
+#loadingBar {
+	position: absolute;
+	width: 0px;
+	height: 15px;
+	background: red;
+}
+
+#startbutton {
+	position: relative;
+	top: 140px;
+	text-align: center;
+	cursor: pointer;
+}
+
