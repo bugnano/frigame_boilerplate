@@ -4,12 +4,14 @@ fg = friGame
 REFRESH_RATE = 15
 
 $(() ->
+	LOADING_BAR_WIDTH = $('#loadingBarB').width()
+
 	# Initialize resources
 	fg.resourceManager
 
 	# Initialize loadCallback
 	fg.loadCallback((percent) ->
-		$('#loadingBar').width(400 * percent)
+		$('#loadingBar').width(LOADING_BAR_WIDTH * percent)
 		return false
 	)
 

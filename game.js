@@ -7,13 +7,17 @@
 	;
 
 	$(function () {
+		var
+			LOADING_BAR_WIDTH = $('#loadingBarB').width()
+		;
+
 		// Initialize resources
 		fg.resourceManager
 		;
 
 		// Initialize loadCallback
 		fg.loadCallback(function (percent) {
-			$('#loadingBar').width(400 * percent);
+			$('#loadingBar').width(LOADING_BAR_WIDTH * percent);
 		});
 
 		// Initialize the start button
