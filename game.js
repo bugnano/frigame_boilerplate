@@ -1,7 +1,9 @@
 /*global jQuery, friGame */
-/*jslint sloppy: true, white: true, browser: true */
+/*jslint white: true, browser: true */
 
 (function ($, fg) {
+	'use strict';
+
 	var
 		REFRESH_RATE = 15
 	;
