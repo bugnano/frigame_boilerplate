@@ -1,14 +1,10 @@
 /*global jQuery, friGame */
-/*jslint white: true, browser: true */
+/*jshint bitwise: true, curly: true, eqeqeq: true, esversion: 3, forin: true, freeze: true, funcscope: true, futurehostile: true, iterator: true, latedef: true, noarg: true, nocomma: true, nonbsp: true, nonew: true, notypeof: false, shadow: outer, singleGroups: false, strict: true, undef: true, unused: true, varstmt: false, eqnull: false, plusplus: true, browser: true, laxbreak: true, laxcomma: true */
 
 (function ($, fg) {
 	'use strict';
 
-	var
-		REFRESH_RATE = 15
-	;
-
-	$(function () {
+	fg.ready(function () {
 		var
 			LOADING_BAR_WIDTH = $('#loadingBarB').width()
 		;
@@ -35,7 +31,7 @@
 
 				// Game logic
 				fg.playground().registerCallback(function () {
-				}, REFRESH_RATE);
+				});
 			});
 		});
 	});

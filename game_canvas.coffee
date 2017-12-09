@@ -1,37 +1,31 @@
 'use strict'
 
-$ = jQuery
 fg = friGame
 
-REFRESH_RATE = 15
-
-$(() ->
-	LOADING_BAR_WIDTH = $('#loadingBarB').width()
-
+fg.ready(() ->
 	# Initialize resources
 	fg.resourceManager
 
 	# Initialize loadCallback
 	fg.loadCallback((percent) ->
-		$('#loadingBar').width(LOADING_BAR_WIDTH * percent)
-		return false
+		document.getElementById('loadingBar').style.width = "#{Math.round(percent * 100)}%"
+		return
 	)
 
 	# Initialize the start button
-	$('#startbutton').click(() ->
+	document.getElementById('startbutton').addEventListener('click', () ->
 		fg.startGame(() ->
-			$('#welcomeScreen').fadeTo(1000, 0, () ->
-				$(@).remove()
-			)
+			el = document.getElementById('welcomeScreen')
+			el.parentNode.removeChild(el)
 
 			# Initialize the playground
 			fg.playground()
 
 			# Game logic
 			fg.playground().registerCallback(() ->
-				return false
-			, REFRESH_RATE)
+				return
+			)
 		)
-	)
+	, false)
 )
 
